@@ -1,0 +1,22 @@
+{
+  "name": "angular-holy-grail",
+  "version": "0.1.0",
+  "description": "Complete barebones Angular application set up",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewburgess/angular-holy-grail.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Andrew Burgess <andrew@andrewburgess.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewburgess/angular-holy-grail/issues"
+  },
+  "homepage": "https://github.com/andrewburgess/angular-holy-grail"
+}
