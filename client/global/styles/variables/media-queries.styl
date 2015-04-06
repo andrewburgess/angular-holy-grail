@@ -1,0 +1,53 @@
+// Configure your media queries here
+
+$screen = 'only screen'
+
+$screen-small-min = 0px
+$screen-small-max = 600px
+
+$screen-medium-min = 600px
+$screen-medium-max = 960px
+
+$screen-large-min = 960px
+$screen-large-max = 1200px
+
+$screen-xlarge-min = 1200px
+$screen-xlarge-max = 1600px
+
+$screen-xxlarge-min = 1601px
+
+minw(w)
+    '(min-width:' + w + ')'
+
+maxw(w)
+    '(max-width:' + w + ')'
+
+min-max(min, max)
+    minw(min) + ' and ' + maxw(max)
+
+screen-min(w)
+    'screen and ' + minw(w)
+
+screen-max(w)
+    'screen and ' + maxw(w)
+
+screen-min-max(min, max)
+    'screen and ' + min-max(min, max)
+
+$media-min-small    ?= screen-min($screen-small-min)
+$media-max-small    ?= screen-max($screen-small-max)
+$media-only-small   ?= screen-min-max($screen-small-min, $screen-small-max)
+
+$media-min-medium   ?= screen-min($screen-medium-min)
+$media-max-medium   ?= screen-max($screen-medium-max)
+$media-only-medium  ?= screen-min-max($screen-medium-min, $screen-medium-max)
+
+$media-min-large    ?= screen-min($screen-large-min)
+$media-max-large    ?= screen-max($screen-large-max)
+$media-only-large   ?= screen-min-max($screen-large-min, $screen-large-max)
+
+$media-min-xlarge   ?= screen-min($screen-xlarge-min)
+$media-max-xlarge   ?= screen-max($screen-xlarge-max)
+$media-only-xlarge  ?= screen-min-max($screen-xlarge-min, $screen-xlarge-max)
+
+$media-min-xxlarge  ?= screen-min($screen-xxlarge-min)

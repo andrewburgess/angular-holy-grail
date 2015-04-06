@@ -1,0 +1,10 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+    display none !important
+
+body
+    opacity 0
+    transition 0.4s ease-in opacity
+    transition-delay 0.1s
+
+    &.bootstrapped
+        opacity 1

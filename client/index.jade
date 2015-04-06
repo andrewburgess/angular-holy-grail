@@ -1,0 +1,44 @@
+html(lang="en", ng-app="app", ng-controller="ApplicationController as appCtrl")
+    include ./global/head/head
+    
+    body(ng-class="{ bootstrapped: true }")
+        div(ui-view="")
+            
+        //-<!-- build:js assets/js/vendor.js -->
+        // bower:js
+        script(src='bower_components/angular/angular.js')
+        script(src='bower_components/angular-animate/angular-animate.js')
+        script(src='bower_components/angular-sanitize/angular-sanitize.js')
+        script(src='bower_components/angular-touch/angular-touch.js')
+        script(src='bower_components/angular-ui-router/release/angular-ui-router.js')
+        script(src='bower_components/angular-messages/angular-messages.js')
+        script(src='bower_components/moment/moment.js')
+        script(src='bower_components/angular-moment/angular-moment.js')
+        script(src='bower_components/lodash/lodash.js')
+        script(src='bower_components/restangular/dist/restangular.js')
+        // endbower
+        
+        // fileblock:js vendor */
+        // endfileblock */
+        //-<!-- endbuild -->
+        
+        if client.debug
+            script.
+                window.__DEBUG = true;
+                
+        script.
+            angular.module('config', [])
+            .constant('Config', !{__json});
+                
+        //-<!-- build:js({.tmp,client}) assets/js/app.js -->
+        // fileblock:js app */
+        script(src="application/application.js")
+        script(src="global/constants.js")
+        script(src="global/head/head.js")
+        script(src="home/home.js")
+        script(src="home/states.js")
+        script(src="index.js")
+        script(src="lib/http-buffer.js")
+        script(src="lib/logger.js")
+        // endfileblock */
+        //-<!-- endbuild -->
