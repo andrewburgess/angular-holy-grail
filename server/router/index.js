@@ -21,10 +21,6 @@ delete configClone.logger;
 delete configClone.server;
 delete configClone.client;
 
-appRouter.get('/auth/token/refresh', function (req, res) {
-    res.render('token-refresh.jade');
-});
-
 // Handles all routes that are not already taken care of by a different
 // middleware
 //

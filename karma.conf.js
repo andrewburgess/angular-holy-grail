@@ -24,7 +24,6 @@ module.exports = function (config) {
             //endbower
 
             /* fileblock:js test */
-            'client/global/constants.js',
             'client/global/head/head.js',
             'client/index.js',
             'client/application/application.js',
